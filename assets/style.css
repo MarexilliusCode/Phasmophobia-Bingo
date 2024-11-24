@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@keyframes swivel {
+    0%   {background-color: #181818;}
+    50%  {background-color: #050505;}
+    100% {background-color: #181818;}
+}
+
+@keyframes victorious {
+    0%   {background-color: #0c6e35;}
+    50%  {background-color: #1ca053;}
+    100% {background-color: #0c6e35;}
+}
+
+@keyframes cardMove {
+    0%   {transform: skew(0deg 0deg)}
+    33%  {transform: skew(1.25deg, 0.5deg)}
+    66%  {transform: skew(0.5deg, 1.25deg)}
+    100% {transform: skew(0deg 0deg)}
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+}
+
+body.inGame {
+    background-color: #00ff00;
+    /*background-color: #181818;
+    animation: swivel 10s linear 0s infinite;*/
+}
+
+body.victory {
+    background-color: #00ff00;
+    /* background-color: #0c6e35;
+    animation: victorious 10s linear 0s infinite;*/
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.bingosheet {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr repeat(5, 2fr);
+    gap: 5px;
+    width: 80vmin;
+    height: 87vmin;
+    background-color: #000000;
+    padding: 1%;
+    transform-origin: 50% 50%;
+    /*text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5);
+    box-shadow: 10px 10px 4px rgba(10, 10, 10, 0.5);*/
+    animation: cardMove 10s ease-in-out 10s infinite;
+}
+
+.bingosheet:hover {
+    animation: none;
+}
+
+.BingoText {
+    background-color: #000000;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    transform: translateY(2%);
+    font-family: Impact, sans-serif;
+}
+
+.bingoCase {
+    padding: 5px;
+    background-color: #ebebeb;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*position: relative;*/
+}
+
+.bingoCase:hover {
+    background-color: #dadada;
+}
+
+.checked {
+    background-color: #26922b;
+    color: white;
+}
+
+.checked:hover {
+    background-color: #1c7a21;
+}
+
+.caseValue {
+    font-size: 25px;
+    text-align: center;
+    font-family: Impact, sans-serif;
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+}
+
+.lang {
+    font-size: 20px;
+    background-color: #3967ca;
+    color: white;
+    display: block;
+    text-align: center;
+    margin-bottom: 2vh;
+    padding: 3%;
+    width: 45%;
+    /*box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.5);*/
+}
+
+.lang:hover {
+    background-color: #224ca8;
+}
+
+.restart {
+    font-size: 20px;
+    background-color: #c22f2f;
+    color: white;
+    display: block;
+    text-align: center;
+    margin-bottom: 2vh;
+    padding: 3%;
+    width: 45%;
+    /*box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.5);*/
+}
+
+.restart:hover {
+    background-color: #701010;
+}
