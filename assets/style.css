@@ -36,13 +36,13 @@ body {
 }
 
 body.inGame {
-    background-color: #00ff00;
+    background-color: #0000ff;
     /*background-color: #181818;
     animation: swivel 10s linear 0s infinite;*/
 }
 
 body.victory {
-    background-color: #00ff00;
+    background-color: #0000ff;
     /* background-color: #0c6e35;
     animation: victorious 10s linear 0s infinite;*/
 }
@@ -73,7 +73,7 @@ body.victory {
     transform-origin: 50% 50%;
     /*text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5);
     box-shadow: 10px 10px 4px rgba(10, 10, 10, 0.5);*/
-    animation: cardMove 10s ease-in-out 10s infinite;
+    /*animation: cardMove 10s ease-in-out 10s infinite;*/
 }
 
 .bingosheet:hover {
