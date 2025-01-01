@@ -36,13 +36,13 @@ body {
 }
 
 body.inGame {
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0);
     /*background-color: #181818;
     animation: swivel 10s linear 0s infinite;*/
 }
 
 body.victory {
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0);
     /* background-color: #0c6e35;
     animation: victorious 10s linear 0s infinite;*/
 }
